@@ -27,7 +27,7 @@ func init() {
 	CmdPod.AddCommand(cmdPodClean)
 }
 
-func podClean(cmd *cobra.Command, args []string) {
+func podClean(cmd *cobra.Command, _ []string) {
 	cliSet, err := client.NewClient(config.ConfigPath)
 	if err != nil {
 		slog.Error("init kube config failed", "error", err)

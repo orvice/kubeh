@@ -2,6 +2,7 @@ package client
 
 import (
 	"k8s.io/client-go/kubernetes"
+	// import auth plugins
 	_ "k8s.io/client-go/plugin/pkg/client/auth"
 	"k8s.io/client-go/tools/clientcmd"
 )
