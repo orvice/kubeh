@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/orvice/kubeh/internal/command/pod"
+	"github.com/orvice/kubeh/internal/config"
 	"github.com/spf13/cobra"
 )
 
@@ -16,6 +17,7 @@ var rootCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(pod.CmdPod)
+	rootCmd.PersistentFlags().StringVar(&config.ConfigPath, "configPath", "kubeconfig path", "kube config path")
 }
 
 func main() {
